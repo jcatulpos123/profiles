@@ -46,8 +46,8 @@ export class AppComponent {
     this.databaseStack = skillService.getDatabaseSkills()
 
     this.fColumns = this.frontendStack.length % 5 == 0 ? Math.trunc(this.frontendStack.length / 5) : Math.trunc(this.frontendStack.length / 5) + 1
-    this.bColumns = this.frontendStack.length % 5 == 0 ? Math.trunc(this.frontendStack.length / 5) : Math.trunc(this.frontendStack.length / 5) + 1
-    this.dColumns = this.frontendStack.length % 5 == 0 ? Math.trunc(this.frontendStack.length / 5) : Math.trunc(this.frontendStack.length / 5) + 1
+    this.bColumns = this.backendStack.length % 5 == 0 ? Math.trunc(this.backendStack.length / 5) : Math.trunc(this.backendStack.length / 5) + 1
+    this.dColumns = this.databaseStack.length % 5 == 0 ? Math.trunc(this.databaseStack.length / 5) : Math.trunc(this.databaseStack.length / 5) + 1
 
     //experience
     this.myExperiences = experienceService.getExperiences()

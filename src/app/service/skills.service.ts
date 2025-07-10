@@ -27,6 +27,7 @@ export class SkillsService {
     backendSkills.push('Spring WebFlux')
     backendSkills.push('REST API')
     backendSkills.push('Salesforce Apex')
+    backendSkills.push('Python')
 
     return backendSkills
   }
