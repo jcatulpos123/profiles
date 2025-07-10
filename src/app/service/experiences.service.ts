@@ -38,7 +38,7 @@ export class ExperiencesService {
         position : 'Intern',
         company : 'Accenture Inc.',
         year : 'Jan 2022 - April 2024',
-        role : 'Develop a desktop application using Python and Selenium for automating recurring tasks.'
+        role : 'Developed a desktop application using Python and Selenium for automating recurring tasks.'
       } as Experience
     ) 
 
