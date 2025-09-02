@@ -28,6 +28,15 @@ export class PersonalProjectsService {
         link : 'https://bhcf-vip-logger.vercel.app/login'
       } as PersonalProjects
     )
+    //3
+    personalProjects.push(
+      {
+        name : 'Church Record Logger (SF)',
+        techstack : 'Apex & LWC',
+        detail : 'Salesforce dev org for vip logging and attendance',
+        link : 'https://blessedhopechristianfellow2-dev-ed.develop.lightning.force.com/'
+      } as PersonalProjects
+    )
 
     return personalProjects
   }
