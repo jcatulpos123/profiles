@@ -17,7 +17,7 @@ export class ExperiencesService {
     // role    : ''
     experiences.push(
       {
-        position : 'Salesforce Specialist (Contractor)',
+        position : 'Contractor: Salesforce Specialist',
         company : 'AppAid LLC',
         year : 'October 2025 - Present',
         role : `
@@ -31,7 +31,7 @@ export class ExperiencesService {
 
     experiences.push(
       {
-        position : 'Junior Developer I',
+        position : 'Junior Full Stack Developer',
         company : 'Magaya Corporation',
         year : 'July 2024 - October 2025',
         role : `
@@ -45,7 +45,7 @@ export class ExperiencesService {
 
     experiences.push(
       {
-        position : 'Salesforce Admin / Developer',
+        position : 'Jr. Salesforce Engineer',
         company : 'Accenture Inc.',
         year : 'August 2022 - July 2024',
         role : `
@@ -59,7 +59,7 @@ export class ExperiencesService {
 
     experiences.push(
       {
-        position : 'Intern',
+        position : 'Student Intern',
         company : 'Accenture Inc.',
         year : 'Jan 2022 - April 2024',
         role : `
