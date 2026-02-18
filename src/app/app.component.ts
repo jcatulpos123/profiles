@@ -18,15 +18,16 @@ import { PersonalProjects } from './model/personal-projects';
   providers: [SkillsService]
 })
 export class AppComponent {
-  title = 'CV'
+  title = 'Profile'
   MY_NAME : string = 'Jhon Diode O. Catulpos'
-  CURRENT_POSITION : string = 'Junior Developer'
-  ABOUT_ME : string = 'I\'m a goal-oriented developer passionate in learning new things and in delivering projects that meet standards. I am committed in learning and getting things done.'
-
+  CURRENT_POSITION : string = 'Software Engineer | 4 Years Experience'
+  ABOUT_ME : string = `I'm a goal-oriented developer passionate about learning new things and delivering projects that meet standards specializing in Salesforce Administration, Development, and Integrations. I am committed to learning and getting things done. `
+  salesforceStack : string[] = []
   frontendStack : string[] = []
   backendStack : string[] = []
   databaseStack : string[] = []
 
+  sColumns : number
   fColumns : number
   bColumns : number
   dColumns : number
@@ -41,10 +42,12 @@ export class AppComponent {
     private educationService : EducationService,
     private personalProjectsService : PersonalProjectsService
   ) {
+    this.salesforceStack = skillService.getSalesforceSkills()
     this.frontendStack = skillService.getFrontendSkills()
     this.backendStack = skillService.getBackendSkills()
     this.databaseStack = skillService.getDatabaseSkills()
 
+    this.sColumns = this.frontendStack.length % 5 == 0 ? Math.trunc(this.frontendStack.length / 5) : Math.trunc(this.frontendStack.length / 5) + 1
     this.fColumns = this.frontendStack.length % 5 == 0 ? Math.trunc(this.frontendStack.length / 5) : Math.trunc(this.frontendStack.length / 5) + 1
     this.bColumns = this.backendStack.length % 5 == 0 ? Math.trunc(this.backendStack.length / 5) : Math.trunc(this.backendStack.length / 5) + 1
     this.dColumns = this.databaseStack.length % 5 == 0 ? Math.trunc(this.databaseStack.length / 5) : Math.trunc(this.databaseStack.length / 5) + 1

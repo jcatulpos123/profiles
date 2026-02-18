@@ -8,15 +8,30 @@
       <main class="main">
         <section class="fade-in">
           <!-- about me -->
-          <h2 class="section-title">About Me</h2> 
+          <h2 class="section-title">About Me</h2>
           <p>{{ ABOUT_ME}}</p>
         </section>
-        
+
         <!-- Tech stacks -->
         <section class="fade-in">
           <h2 class="section-title">Techstack</h2>
           <div>
             <div class="projects">
+              <div class="project-card">
+                <h3>Salesforce</h3>
+                <ul class="skills-list">
+                  <!-- loop skills 5 items max-->
+                  <div class="skills-list-column" *ngFor="let row of [].constructor(fColumns); index as i">
+                    <ng-container *ngFor="let r of [].constructor(salesforceStack.length); index as l">
+                      <ng-container *ngIf="l < 5">
+                        <li *ngIf="salesforceStack[(5*i)+l]">
+                          {{ salesforceStack[(5*i)+l]}}
+                        </li>
+                      </ng-container>
+                    </ng-container>
+                  </div>
+                </ul>
+              </div>
               <div class="project-card">
                 <h3>Frontend</h3>
                 <ul class="skills-list">
@@ -28,7 +43,7 @@
                           {{ frontendStack[(5*i)+l]}}
                         </li>
                       </ng-container>
-                    </ng-container>  
+                    </ng-container>
                   </div>
                 </ul>
               </div>
@@ -43,7 +58,7 @@
                           {{ backendStack[(5*i)+l]}}
                         </li>
                       </ng-container>
-                    </ng-container>  
+                    </ng-container>
                   </div>
                 </ul>
               </div>
@@ -58,7 +73,7 @@
                           {{ databaseStack[(5*i)+l]}}
                         </li>
                       </ng-container>
-                    </ng-container>  
+                    </ng-container>
                   </div>
                 </ul>
               </div>
